@@ -1,5 +1,8 @@
 # air.zsh-theme
-Air `zsh` theme: ➜ [23:58:53] catalog (main *)
+Air `zsh` theme
+```
+➜ [23:58:53] catalog (main *)
+```
 
 ## Install
 
