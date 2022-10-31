@@ -1,5 +1,5 @@
 # air.zsh-theme
-Air `zsh` theme
+Air `zsh` theme: ➜ [23:58:53] catalog (main *)
 
 ## Install
 
@@ -8,7 +8,7 @@ Air `zsh` theme
 Add following line into your `~/.zshrc`, before `antigen apply`:
 
 ```
-antigen theme ivan-kuzmichev/air-theme
+antigen theme ivan-kuzmichev/air
 ```
 
 You can also preview theme without making it default by executing this command in active zsh session.
