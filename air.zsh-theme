@@ -20,7 +20,7 @@ function git_prompt() {
 
     if [[ $arcadia == '' ]]; then
         branch=`git_current_branch`
-        changes=`git status | grep 'Changes not staged for commit'`
+        [[ $branch != '' ]] && changes=`git status | grep 'Changes not staged for commit'`
     else
         branch=`arc info | grep 'branch:' | sed 's/branch: //'`
         changes=`arc status | grep 'Changes not staged for commit'`
