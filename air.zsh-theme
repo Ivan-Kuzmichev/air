@@ -10,7 +10,7 @@ function print_branch() {
     if [ "$1" = '' ]; then
         echo ''
     else
-        [[ $2 = '' ]] && CHANGES="" || CHANGES=" *"
+        [[ $2 = '' ]] && CHANGES=" *" || CHANGES=""
         echo "$REPOSIRORY_PROMPT_PREFIX$1$CHANGES$REPOSIRORY_PROMPT_SUFFIX"
     fi
 }
@@ -20,10 +20,10 @@ function git_prompt() {
 
     if [[ $arcadia == '' ]]; then
         branch=`git_current_branch`
-        [[ $branch != '' ]] && changes=`git status | grep 'Changes not staged for commit'`
+        [[ $branch != '' ]] && changes=`git status | grep 'nothing to commit, working directory clean'`
     else
         branch=`arc info | grep 'branch:' | sed 's/branch: //'`
-        changes=`arc status | grep 'Changes not staged for commit'`
+        changes=`arc status | grep 'nothing to commit, working directory clean'`
     fi
 
     print_branch $branch $changes
